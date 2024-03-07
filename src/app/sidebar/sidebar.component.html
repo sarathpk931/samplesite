@@ -1,0 +1,25 @@
+<div class="sidebar" [class.closed]="!isOpen">
+    <!-- Sidebar content goes here -->
+    
+    <div class="logo container">
+        <button class="home-icon-button">
+            <span class="home-icon">&#8962;</span> 
+          </button>
+        
+       
+      </div>
+      <nav>
+        <ul>
+          <li><button (click)="navigateToForm()">Register New user</button></li>
+          <li><a routerLink="/dashboard">Top Brands</a></li>
+          <li><a routerLink="/profile">Offers</a></li>
+          <li><a routerLink="/">Shoes</a></li>
+          <li><a routerLink="/dashboard">Watches</a></li>
+          <li><a routerLink="/profile">Furnitures</a></li>
+          <li><a routerLink="/">Tvs</a></li>
+          <li><a routerLink="/dashboard">Laptops</a></li>
+          <li><a routerLink="/profile">Furnitures</a></li>
+          <!-- Add more sidebar items as needed -->
+        </ul>
+      </nav>
+  </div>

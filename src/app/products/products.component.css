@@ -1,0 +1,6 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 16px; /* Adjust the gap between items as needed */
+
+  }

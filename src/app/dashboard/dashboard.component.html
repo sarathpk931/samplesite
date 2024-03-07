@@ -1,0 +1,26 @@
+<div style="background-color: aquamarine;">
+    <app-sidebar [isOpen]="isSidebarOpen"></app-sidebar>
+  
+    <div class="dashboard">
+      
+      <h2> &nbsp;&nbsp; Ekart</h2>
+      <!-- Add your dashboard widgets and components here -->
+     <input type="text" placeholder="Search item here..." style="border-radius: .5pc;height: 30px; width: 500px;"/>
+      <div style="padding-right: 10px;padding-top: 7px;">
+       <button mat-primary style="background-color: rgb(183, 189, 220);border-radius: .5pc;align-self: flex-end; height: 35px;margin-top: 10px;"><h3>Search</h3></button> 
+        <!-- Add your statistical data or other widgets here -->
+        <Div style="align-self: flex-end;">
+      <a routerLink="/dashboard">Login</a>
+      <a routerLink="/dashboard">Sign up</a>
+    </Div>
+      </div>
+     
+    </div>
+   
+
+  <div style="background-color: rgb(240, 233, 230); margin-left: 10px;">
+    <app-spinner ></app-spinner>
+  </div>
+  
+</div>
+

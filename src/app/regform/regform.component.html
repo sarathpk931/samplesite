@@ -1,0 +1,79 @@
+<div style="background-color: cadetblue; height: 2000px;">
+    <div class="form" >
+        <h1 style="text-align: center;"><b> Registration form</b></h1>
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="form-container">
+    
+    <label for="first-name">First Name: </label>
+    <input id="firstname" type="text" formControlName="firstname" />
+  
+    <div
+      *ngIf="taskForm.controls.firstname.invalid && (taskForm.controls.firstname.dirty || taskForm.controls.firstname.touched)">
+      <div *ngIf="taskForm.controls.firstname?.errors?.['required']" ><span style="color: red;">firstname is required</span></div>
+    
+      </div>
+
+      <div *ngIf="taskForm.controls.firstname.errors?.['minlength']">
+        <span style="color: red;">first name must be at least 5 characters long.</span>
+      </div>
+ 
+    <br />
+ 
+    <label for="last-name">Last Name: </label>
+    <input id="lastname" type="text" formControlName="lastname" />
+  
+    <div
+      *ngIf="taskForm.controls.lastname.invalid && (taskForm.controls.lastname.dirty || taskForm.controls.lastname.touched)">
+      <div *ngIf="taskForm.controls.lastname?.errors?.['required']"><span style="color: red;">last name is required</span></div>
+    
+      </div>
+
+      <div *ngIf="taskForm.controls.lastname.errors?.['minlength']">
+        <span style="color: red;">last name must be at least 5 characters long.</span>
+      </div>
+ 
+    <br />
+    <label for="email">Email: </label>
+    <input id="email" type="text" formControlName="email" />
+  
+    <div
+      *ngIf="(taskForm.controls.email.dirty || taskForm.controls.email.touched)">
+      <div *ngIf="taskForm.controls.email?.errors?.['required']"><span style="color: red;">email is required</span></div>
+      <div *ngIf="taskForm.controls.email?.errors?.['email']"><span style="color: red;">Please enter valid email</span>
+    </div>
+      </div>
+    <br/>
+    <label for="email">Ph Number: </label>
+    <input id="phone" type="text" formControlName="phone" />
+  
+    <div
+      *ngIf="(taskForm.controls.phone.dirty || taskForm.controls.phone.touched)">
+      <div *ngIf="taskForm.controls.phone?.errors?.['required']"><span style="color: red;">ph number is required</span></div>
+      <div *ngIf="taskForm.controls.phone?.errors?.['pattern']"><span style="color: red;">Please enter valid ph number</span>
+    </div>
+      </div>
+    <br/>
+    <label for="dob">Date Of birth: </label>
+    <input id="dob" type="date" formControlName="dob" />
+  
+    <div
+      *ngIf="(taskForm.controls.dob.dirty || taskForm.controls.dob.touched)">
+      <div *ngIf="taskForm.controls.dob?.errors?.['required']"><span style="color: red;">date of birth is required</span></div>
+
+    </div>
+      
+    <br/>
+    <label for="dob">Address: </label>
+    <input id="address" type="text" formControlName="address" />
+    <div
+      *ngIf="(taskForm.controls.address.dirty || taskForm.controls.address.touched)">
+      <div *ngIf="taskForm.controls.address?.errors?.['required']"><span style="color: red;">Address is required</span></div>
+      <div *ngIf="taskForm.controls.address?.errors?.['maxlength']"><span style="color: red;">Address is must be less than 10 characters</span>
+    </div>
+      </div>
+    <br/>
+    <button type="submit" style="background-color: rgb(204, 219, 204); margin-top: 16px;" [disabled]="!taskForm.valid"><b>Submit</b> </button>
+
+
+</form>
+</div>
+</div>
